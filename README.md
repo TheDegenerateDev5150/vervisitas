@@ -1,4 +1,4 @@
-# 📊 VerVisitas - Analizador de Logs Apache
+### vervisitas - analizador de Logs Apache
 
 ![Hacking y Seguridad](http://hackingyseguridad.com/banner.png)
 
@@ -6,7 +6,7 @@
 
 ![Logo VerVisitas](./vervisitas.png)
 
-## 📋 Tabla de Contenidos
+### Tabla de Contenidos
 
 - [Introducción](#introducción)
 - [¿Qué es VerVisitas?](#qué-es-vervisitas)
@@ -29,18 +29,18 @@
 
 ---
 
-## Introducción
+### Introducción
 
 Los servidores web generan miles de peticiones diarias. Analizar estos logs es fundamental para:
 
-✅ **Detectar ataques** - Identificar patrones maliciosos  
-✅ **Monitorear tráfico** - Ver cuántas visitas recibe tu sitio  
-✅ **Auditar accesos** - Quién accedió a qué y cuándo  
-✅ **Investigar errores** - Diagnosticar problemas de conexión  
-✅ **Optimizar rendimiento** - Identificar recursos lentos  
-✅ **Cumplimiento legal** - Registro de accesos para auditoría  
+**Detectar ataques** - Identificar patrones maliciosos  
+**Monitorear tráfico** - Ver cuántas visitas recibe tu sitio  
+**Auditar accesos** - Quién accedió a qué y cuándo  
+**Investigar errores** - Diagnosticar problemas de conexión  
+**Optimizar rendimiento** - Identificar recursos lentos  
+**Cumplimiento legal** - Registro de accesos para auditoría  
 
-### 🎯 Objetivo del Proyecto
+### Objetivo 
 
 VerVisitas es una **herramienta minimalista pero potente** que:
 
@@ -52,7 +52,7 @@ VerVisitas es una **herramienta minimalista pero potente** que:
 
 ---
 
-## ¿Qué es VerVisitas?
+### VerVisitas
 
 VerVisitas es un conjunto de **scripts bash + interfaz web HTML** que permite:
 
@@ -63,7 +63,7 @@ VerVisitas es un conjunto de **scripts bash + interfaz web HTML** que permite:
 5. **Geolocalizar** - Obtener ubicación geográfica de visitantes
 6. **Exportar datos** - Guardar logs para análisis posterior
 
-### 🏗️ Arquitectura
+### Arquitectura
 
 ```
 ┌─────────────────────────────────────────┐
@@ -89,9 +89,9 @@ VerVisitas es un conjunto de **scripts bash + interfaz web HTML** que permite:
 
 ---
 
-## Características
+### Características
 
-### ✨ Funcionalidades Principales
+### Funcionalidades Principales
 
 | Característica | Descripción | Uso |
 |----------------|-------------|-----|
@@ -104,7 +104,7 @@ VerVisitas es un conjunto de **scripts bash + interfaz web HTML** que permite:
 | **Múltiples Formatos** | Apache, Nginx, syslog | Flexibilidad |
 | **Estadísticas** | Resúmenes por IP, hora, etc. | Reportes |
 
-### 🔧 Herramientas Incluidas
+### Herramientas Incluidas
 
 | Herramienta | Tipo | Función | Versión |
 |------------|------|---------|---------|
@@ -118,9 +118,9 @@ VerVisitas es un conjunto de **scripts bash + interfaz web HTML** que permite:
 
 ---
 
-## Requisitos
+### Requisitos
 
-### 🖥️ Requisitos del Sistema
+### Requisitos del Sistema
 
 | Requisito | Mínimo | Recomendado |
 |-----------|--------|------------|
@@ -133,7 +133,7 @@ VerVisitas es un conjunto de **scripts bash + interfaz web HTML** que permite:
 | **RAM** | 512 MB | 2 GB+ (para análisis grandes) |
 | **Navegador** | HTML5 | Chrome, Firefox, Safari, Edge |
 
-### 📦 Paquetes Necesarios
+### Paquetes necesarios
 
 ```bash
 # Ubuntu/Debian
@@ -164,7 +164,7 @@ sudo yum install \
 brew install apache2 curl wget gawk grep gnu-sed coreutils
 ```
 
-### 🔐 Permisos Necesarios
+### Permisos necesarios
 
 ```bash
 # Ver logs de Apache requiere permisos root o grupo apache
@@ -178,9 +178,9 @@ sudo /path/to/vervisitas
 
 ---
 
-## Instalación
+### Instalación
 
-### 📥 Opción 1: Instalación Automática
+### Opción 1: Instalación Automática
 
 ```bash
 # Clonar repositorio
@@ -194,14 +194,7 @@ chmod +x instalar.sh
 sudo ./instalar.sh
 ```
 
-**¿Qué hace instalar.sh?**:
-- ✅ Instala dependencias necesarias
-- ✅ Copia scripts a `/usr/local/bin/`
-- ✅ Copia archivos web a `/var/www/html/`
-- ✅ Configura permisos
-- ✅ Crea directorios necesarios
-
-### 📥 Opción 2: Instalación Manual
+### Opción 2: Instalación Manual
 
 #### Paso 1: Clonar repositorio
 
@@ -265,7 +258,7 @@ sudo usermod -a -G adm $USER
 sudo chmod 644 /var/log/apache2/access.log
 ```
 
-### ✅ Verificar Instalación
+### Verificar Instalación
 
 ```bash
 # Verificar que los scripts están disponibles
@@ -285,7 +278,7 @@ sudo vervisitas
 
 ---
 
-## Scripts Disponibles
+### Scripts Disponibles
 
 ### 🔧 Script: vervisitas
 
@@ -339,13 +332,6 @@ sudo tail -500 /var/log/apache2/access.log | grep "14/Jul/2026:15"
 ```bash
 sudo vervisitas2
 ```
-
-**Mejoras respecto a v1**:
-- ✅ Filtra por rango de códigos HTTP
-- ✅ Estadísticas de acceso por IP
-- ✅ Resumen de métodos HTTP
-- ✅ Top 10 de páginas accedidas
-- ✅ Alertas de ataques potenciales
 
 **Ejemplo de salida**:
 ```
@@ -430,18 +416,11 @@ watch -n 1 'sudo netstat -an | grep ESTABLISHED | wc -l'
 sudo verconxiones.sh
 ```
 
-**Características**:
-- ✅ Resumen por puerto
-- ✅ Conexiones por estado
-- ✅ Top IPs conectadas
-- ✅ Alertas de congestión
-- ✅ Estadísticas en tiempo real
-
 ---
 
-## Uso Detallado
+### Uso detallado
 
-### 🔍 Casos de Uso Común
+### Casos de uso 
 
 #### Monitorear en Tiempo Real
 
@@ -517,9 +496,9 @@ sudo awk '{print $9}' /var/log/apache2/access.log | sort | uniq -c | sort -rn
 
 ---
 
-## Configuración de Apache
+### Configuración de Apache
 
-### ⚙️ Habilitar Módulos Necesarios
+### Habilitar módulos necesarios
 
 ```bash
 # Habilitar módulos
@@ -533,7 +512,7 @@ sudo a2enmod access_compat    # Compatibilidad
 sudo systemctl restart apache2
 ```
 
-### 📝 Formato de Logs Recomendado
+### Formato de Logs 
 
 #### Archivo: `/etc/apache2/apache2.conf`
 
@@ -594,7 +573,7 @@ sudo apache2ctl configtest
 sudo systemctl restart apache2
 ```
 
-### 📊 Ubicación de Logs
+###  Ubicación de Logs
 
 | Distribución | Ubicación |
 |-------------|-----------|
@@ -611,9 +590,9 @@ sudo systemctl restart apache2
 
 ---
 
-## Análisis de Logs
+### Análisis de Logs
 
-### 📋 Campos del Log Apache (Combined Format)
+### Campos del Log Apache (Combined Format)
 
 ```
 192.168.1.100 - username [14/Jul/2026:12:34:56 +0000] "GET / HTTP/1.1" 200 1234 "-" "Mozilla/5.0"
@@ -631,7 +610,7 @@ sudo systemctl restart apache2
 
 ```
 
-### 📊 Tabla de Códigos HTTP
+### Tabla de Códigos HTTP
 
 | Código | Significado | Acción |
 |--------|-------------|--------|
@@ -654,7 +633,7 @@ sudo systemctl restart apache2
 | 502 | Bad Gateway | Gateway inválido |
 | 503 | Service Unavailable | Servicio no disponible |
 
-### 🔍 Análisis Detallado
+### Análisis Detallado
 
 #### Ver resumen de accesos
 
@@ -724,7 +703,7 @@ sudo awk -F'"' '{print $(NF-1)}' /var/log/apache2/access.log | \
 
 ## Formatos de Log
 
-### 📄 Common Log Format (CLF)
+### Common Log Format (CLF)
 
 ```apache
 LogFormat "%h %l %u %t \"%r\" %>s %b" common
@@ -744,7 +723,7 @@ LogFormat "%h %l %u %t \"%r\" %>s %b" common
 - `%s` - HTTP status
 - `%b` - Bytes sent
 
-### 📄 Combined Log Format (Recomendado)
+###  Combined Log Format (Recomendado)
 
 ```apache
 LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
@@ -755,7 +734,7 @@ LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combine
 192.168.1.100 - - [14/Jul/2026:12:34:56 +0000] "GET / HTTP/1.1" 200 1234 "http://google.com" "Mozilla/5.0"
 ```
 
-### 📄 Formato Personalizado
+###  Formato Personalizado
 
 ```apache
 # Con información adicional
@@ -777,7 +756,7 @@ LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %T %D" d
 # %>s - Status code (último)
 ```
 
-### 📄 Formato JSON (Para análisis avanzado)
+### Formato JSON (Para análisis avanzado)
 
 ```apache
 LogFormat "{ \"timestamp\": \"%t\", \"client_ip\": \"%h\", \"method\": \"%m\", \"uri\": \"%U\", \"status\": %s, \"bytes_sent\": %b, \"response_time_us\": %D, \"user_agent\": \"%{User-Agent}i\", \"referer\": \"%{Referer}i\" }" json
@@ -792,7 +771,7 @@ LogFormat "{ \"timestamp\": \"%t\", \"client_ip\": \"%h\", \"method\": \"%m\", \
 
 ## Geolocalización de IPs
 
-### 🌍 Servicios de Geolocalización Gratis
+### Servicios de Geolocalización Gratis
 
 | Servicio | Límite | Acceso | Ejemplo |
 |----------|--------|--------|---------|
@@ -801,7 +780,7 @@ LogFormat "{ \"timestamp\": \"%t\", \"client_ip\": \"%h\", \"method\": \"%m\", \
 | **geoip.json.io** | Ilimitado | REST API | `https://geoip.json.io/192.168.1.1` |
 | **GeoIP2** | Pagado | MaxMind | Más precisión |
 
-### 📍 Script: Geolocalizar IPs
+### Script: geolocalizar IP
 
 ```bash
 #!/bin/bash
@@ -835,7 +814,7 @@ chmod +x geoip.sh
 }
 ```
 
-### 🔍 Geolocalizar desde logs
+### Geolocalizar desde logs
 
 ```bash
 # Extraer IPs únicas y geolocalizarlas
@@ -854,7 +833,7 @@ sudo awk '{print $1}' /var/log/apache2/access.log | \
 192.0.2.50    United Kingdom, London
 ```
 
-### 📊 Mapa de accesos
+### Mapa de accesos
 
 Crear mapa HTML con accesos geolocalizados:
 
@@ -887,7 +866,7 @@ Crear mapa HTML con accesos geolocalizados:
 
 ## Interfaz Web
 
-### 🌐 Archivos HTML Disponibles
+### Archivos HTML Disponibles
 
 | Archivo | Descripción | Características |
 |---------|-------------|-----------------|
@@ -898,7 +877,7 @@ Crear mapa HTML con accesos geolocalizados:
 | **gatito.gif** | Animación | GIF animado |
 | **gatito.mp4** | Video | Video decorativo |
 
-### 📊 Características de index.html
+### Características de index.html
 
 ```html
 <!DOCTYPE html>
@@ -926,7 +905,7 @@ Crear mapa HTML con accesos geolocalizados:
 </html>
 ```
 
-### 🔄 Auto-actualización
+### Auto-actualización
 
 ```html
 <script>
@@ -947,9 +926,9 @@ Crear mapa HTML con accesos geolocalizados:
 
 ---
 
-## Seguridad
+### Seguridad
 
-### 🔒 Proteger Acceso a Logs
+### Proteger Acceso a Logs
 
 #### Proteger directorio web
 
@@ -991,7 +970,7 @@ sudo visudo
 # usuario ALL=NOPASSWD: /usr/local/bin/vervisitas
 ```
 
-### 🛡️ Proteger Datos Sensibles
+### Proteger Datos Sensibles
 
 ```bash
 # Rotar logs regularmente
@@ -1004,7 +983,7 @@ sudo gzip /var/log/apache2/access.log.1
 sudo tar czf /backup/apache-logs-$(date +%Y%m%d).tar.gz /var/log/apache2/
 ```
 
-### 📊 Permisos Recomendados
+### Permisos Recomendados
 
 ```bash
 # Logs solo legibles por root/apache
@@ -1022,9 +1001,9 @@ sudo chmod 755 /var/www/html/
 
 ---
 
-## Análisis Avanzado
+### Análisis Avanzado
 
-### 🔬 Detectar Ataques
+###  Detectar Ataques
 
 #### Fuerza Bruta SSH (en logs)
 
@@ -1070,7 +1049,7 @@ sudo grep -E "\.\./|\.\.%2f" /var/log/apache2/access.log
 sudo awk '{print $1}' /var/log/apache2/access.log | sort | uniq -c | awk '$1 > 100 {print $2}'
 ```
 
-### 📈 Gráficos y Reportes
+### Gráficos y Reportes
 
 #### Accesos por hora (ASCII)
 
@@ -1141,7 +1120,7 @@ sudo tail -f /var/log/apache2/access.log | while read line; do
 done
 ```
 
-### 🚨 Alertas Automáticas
+### Alertas Automáticas
 
 #### Script de monitoreo con alertas
 
@@ -1156,7 +1135,7 @@ while true; do
   ERRORS=$(tail -100 $LOG | grep " 5[0-9][0-9] " | wc -l)
   
   if [ $ERRORS -gt $THRESHOLD ]; then
-    echo "⚠️ ALERTA: $ERRORS errores detectados" | \
+    echo " ALERTA: $ERRORS errores detectados" | \
       mail -s "Apache Error Alert" admin@ejemplo.com
     
     # O notificación local
@@ -1184,7 +1163,7 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-### 📊 Prometheus Exporter
+### Prometheus Exporter
 
 Exponer métricas para Prometheus/Grafana:
 
@@ -1229,9 +1208,9 @@ nc -l -p $PORT -e "bash -c 'http_server'"
 
 ---
 
-## Casos de Uso
+### Casos de Uso
 
-### 📌 Caso 1: Monitorear un Sitio Web
+### Caso 1: Monitorear un Sitio Web
 
 ```bash
 # 1. Ver estadísticas en vivo
@@ -1251,7 +1230,7 @@ sudo bash -c 'echo "=== Accesos Últimas 24h ===" && \
   grep " 4[0-9][0-9] \| 5[0-9][0-9] " /var/log/apache2/access.log | wc -l'
 ```
 
-### 📌 Caso 2: Investigar Ataque
+### Caso 2: Investigar Ataque
 
 ```bash
 # 1. Ver IP atacante
@@ -1268,7 +1247,7 @@ sudo iptables-save > /etc/iptables/rules.v4
 sudo iptables -L -n | grep 203.0.113.45
 ```
 
-### 📌 Caso 3: Diagnosticar Problema de Rendimiento
+### Caso 3: Diagnosticar Problema de Rendimiento
 
 ```bash
 # 1. Ver URLs más lentas (tiempo en microsegundos)
@@ -1282,7 +1261,7 @@ sudo grep " 503 \| 504 " /var/log/apache2/access.log | wc -l
 sudo journalctl -u apache2 --since "14:00" --until "15:00" | grep -i error
 ```
 
-### 📌 Caso 4: Auditoría de Accesos
+###  Caso 4: Auditoría de Accesos
 
 ```bash
 # 1. Ver quién accedió a /admin
@@ -1300,7 +1279,7 @@ sudo tar czf /backup/audit-$(date +%Y%m%d).tar.gz /var/log/apache2/access.log
 
 ## Troubleshooting
 
-### ❌ Problemas Comunes
+### Problemas Comunes
 
 | Problema | Causa | Solución |
 |----------|-------|----------|
@@ -1333,7 +1312,7 @@ which vervisitas
 which verconexiones
 ```
 
-### 📊 Test de Conectividad
+###  Test de Conectividad
 
 ```bash
 # Generar tráfico de prueba
@@ -1373,13 +1352,13 @@ sudo tail -3 /var/log/apache2/access.log
 | **watch** | Ejecutar periódicamente |
 | **logrotate** | Rotar logs |
 
-### 📖 Lectura Recomendada
+### Lectura Recomendada
 
 - 📖 "Linux System Administration" - Evi Nemeth
 - 📖 "Apache: The Definitive Guide" - Laurie, Laurie, Dubois
 - 📖 "Web Security Testing Cookbook" - Stuttard, Pinto
 
-### 🌐 Sitios Web Útiles
+### Sitios Web Útiles
 
 - 🔗 [Apache HTTP Server](https://httpd.apache.org/)
 - 🔗 [HTTP Status Codes](https://http.cat/)
@@ -1388,7 +1367,7 @@ sudo tail -3 /var/log/apache2/access.log
 
 ---
 
-## 📁 Estructura del Repositorio
+### Estructura del Repositorio
 
 ```
 vervisitas/
@@ -1410,7 +1389,7 @@ vervisitas/
 
 ---
 
-## 🚀 Quick Start
+### Quick Start
 
 ### Instalación Rápida (3 pasos)
 
@@ -1442,62 +1421,6 @@ sudo verconexiones
 # Acceder a http://localhost/index.html en navegador
 ```
 
----
-
-## ⚖️ Licencia
-
-Este proyecto está bajo licencia **GPL-3.0**. Ver [LICENSE](LICENSE).
-
----
-
-## 📞 Contacto
-
-- 🌐 **Sitio Web**: [www.hackingyseguridad.com](http://www.hackingyseguridad.com/)
-- 📧 **GitHub**: [hackingyseguridad](https://github.com/hackingyseguridad)
-- 🐛 **Issues**: [Reportar problema](https://github.com/hackingyseguridad/vervisitas/issues)
-
----
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas:
-
-1. Fork el repositorio
-2. Crea una rama (`git checkout -b feature/mejora`)
-3. Commit cambios (`git commit -am 'Añade mejora'`)
-4. Push a rama (`git push origin feature/mejora`)
-5. Abre Pull Request
-
----
-
-## 📈 Estado del Proyecto
-
-| Aspecto | Estado |
-|--------|--------|
-| Última Actualización | Julio 2026 |
-| Versión | 2.1 |
-| Mantenimiento | 🟢 Activo |
-| Estabilidad | 🟢 Estable |
-| Compatibilidad | 🟢 Ubuntu/Debian/CentOS |
-| Documentación | 🟢 Completa |
-
----
-
-## ⭐ Características Futuras
-
-- [ ] Dashboard React/Vue en tiempo real
-- [ ] Análisis ML de anomalías
-- [ ] Integración con Elasticsearch
-- [ ] Alertas por Telegram/Slack
-- [ ] Gráficos interactivos con Chart.js
-- [ ] API REST
-- [ ] Docker containerización
-- [ ] Soporte para Nginx
-- [ ] Base de datos histórica
-- [ ] Reportes automatizados
-
----
-
-**🎯 Usa VerVisitas para mantener tu servidor web seguro y monitoreado.**
-
-**Hecho con ❤️ por Hacking y Seguridad**
+#
+http://wwww.hackingyseguridad.com/
+#
