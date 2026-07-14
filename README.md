@@ -1,7 +1,5 @@
 ### vervisitas - analizador de Logs Apache
 
-![Hacking y Seguridad](http://hackingyseguridad.com/banner.png)
-
 > **Herramienta moderna para monitorizar y analizar logs de peticiones web en Apache Server en tiempo real.**
 
 ![Logo VerVisitas](./vervisitas.png)
