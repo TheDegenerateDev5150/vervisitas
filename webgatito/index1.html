@@ -1,0 +1,62 @@
+<!-- Codigo index.html para registrar IP visita y redigir a otra pagina -->
+<!-- Subir fichero a la carpeta del Apache Server /var/www/html/ ..  -->
+<!-- Optimizado para enviar el enlace por Whatsapp .  -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Buenos días!!! 😻</title>
+    <meta name="description" content="Mira este gatito tan bonito">
+
+    <!-- === META TAGS PARA WHATSAPP + OTRAS REDES === -->
+    <meta property="og:title" content="Buenos días!!! 😻">
+    <meta property="og:description" content="Mira este gatito tan bonito">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://t.hackingyseguridad.com/index2.html">
+    
+    <!-- WhatsApp funciona mucho mejor con imagen estática (primer frame) -->
+    <meta property="og:image" content="http://t.hackingyseguridad.com/gatito.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    
+    <!-- Fallback al GIF (algunos clientes lo usarán) -->
+    <meta property="og:image" content="http://t.hackingyseguridad.com/gatito.gif">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Buenos días!!! 😻">
+    <meta name="twitter:description" content="Mira este gatito tan bonito">
+    <meta name="twitter:image" content="http://t.hackingyseguridad.com/gatito.gif">
+
+    <meta property="og:site_name" content="Hacking y Seguridad">
+    <link rel="canonical" href="http://t.hackingyseguridad.com/index2.html">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mostramos el MP4 (más ligero y compatible) con fallback al GIF -->
+    <video autoplay loop muted playsinline poster="gatito.gif">
+        <source src="gatito.mp4" type="video/mp4">
+        <img src="gatito.gif" alt="Gatito 😻">
+    </video>
+
+</body>
+</html>
